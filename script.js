@@ -43,3 +43,6 @@ for (var i = 0; i < navLinks.length; i++) {
     menuBtn.style.pointerEvents = "auto";
   });
 }
+function rotateBox(box) {
+  box.classList.toggle("rotated");
+}
