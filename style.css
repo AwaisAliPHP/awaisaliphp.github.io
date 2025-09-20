@@ -277,58 +277,105 @@ section .button button:hover{
 }
 
  /* My Skills CSS */
- .skills{
-   background: #F0F8FF;
- }
- .skills .content{
-   padding: 40px 0;
- }
- .skills .skills-details{
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
- }
- .skills-details .text{
-   width: 50%;
- }
- .skills-details p{
-   color: #0E2431;
-   text-align: justify;
- }
-.skills .skills-details .experience{
+ .skills {
+  background: #f0f8ff;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.skills .title span {
+  font-size: 2rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #4070f4, #00c6ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Top Intro */
+.skills-intro {
+  max-width: 800px;
+  margin: 0 auto 50px;
+}
+
+.skills-intro .topic {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #0e2431;
+}
+
+.skills-intro p {
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 25px;
+}
+
+.skills-intro .experience {
   display: flex;
+  justify-content: center;
   align-items: center;
-  margin: 0 10px;
+  gap: 15px;
 }
-.skills-details .experience .num{
-  color: #0E2431;
-  font-size: 80px;
+
+.skills-intro .num {
+  font-size: 70px;
+  font-weight: 700;
+  color: #4070f4;
 }
-.skills-details .experience .exp{
-  color: #0E2431;
-  margin-left: 20px;
+
+.skills-intro .exp {
   font-size: 18px;
   font-weight: 500;
-  margin: 0 6px;
+  color: #0E2431;
 }
-.skills-details .boxes{
-  width: 45%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+
+/* Skills Grid */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 40px;
 }
-.skills-details .box{
-  width: calc(100% / 2 - 20px);
-  margin: 20px 0;
+
+.skill-box {
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: left;
 }
-.skills-details .boxes .topic{
-  font-size: 20px;
+
+.skill-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(64, 112, 244, 0.25);
+}
+
+.skill-box .icon {
+  font-size: 32px;
   color: #4070f4;
+  margin-bottom: 12px;
 }
-.skills-details .boxes .per{
-  font-size: 60px;
-  color: #4070f4;
+
+.skill-box h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #0e2431;
 }
+
+.skill-box ul {
+  padding-left: 18px;
+  color: #444;
+  line-height: 1.6;
+}
+
+.skill-box ul li {
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+}
+
+
 
 /* My Services CSS */
 .services .boxes{
@@ -577,61 +624,90 @@ footer .text span a:hover{
   color: #555;
   margin: 5px 0;
 }
-.projects .project-boxes {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
-}
-.project-box {
+.project-boxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
   perspective: 1000px;
-  width: 250px;
-  height: 200px;
+}
+
+.project-box {
   position: relative;
+  width: 100%;
+  height: 220px;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease;
   cursor: pointer;
 }
-.project-box div {
+
+.project-box:hover {
+  transform: rotateY(180deg);
+}
+
+.project-box .front,
+.project-box .back {
+  position: absolute;
   width: 100%;
   height: 100%;
-  position: absolute;
-  transition: transform 0.6s;
-  transform-style: preserve-3d;
-  backface-visibility: hidden;
+  padding: 1.2rem;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  backface-visibility: hidden;
+}
+
+.project-box .front h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.project-box .back {
+  transform: rotateY(180deg);
+  text-align: center;
+}
+
+.project-box .back a {
+  margin-top: 10px;
+  padding: 8px 18px;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #4070f4, #00c6ff);
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.project-box .back a:hover {
+  box-shadow: 0 6px 16px rgba(64,112,244,0.3);
+  transform: translateY(-3px);
+}
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  z-index: 1000;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.project-box .front {
-  background-color: #f5f5f5;
+
+.whatsapp-float img {
+  width: 32px;
+  height: 32px;
+  filter: brightness(0) invert(1);
 }
-.project-box .back {
-  background-color: #007bff;
-  color: white;
-  transform: rotateY(180deg);
-}
-.project-box.rotated .front {
-  transform: rotateY(180deg);
-}
-.project-box.rotated .back {
-  transform: rotateY(0);
-}
-.project-box h3 {
-  font-size: 1.25rem;
-  margin: 0.5rem 0;
-}
-.project-box a {
-  margin-top: 1rem;
-  padding: 0.5rem 1rem;
-  background-color: white;
-  color: #007bff;
-  border-radius: 4px;
-  text-decoration: none;
-}
-.project-box a:hover {
-  background-color: #0056b3;
-  color: white;
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(37,211,102,0.4);
 }

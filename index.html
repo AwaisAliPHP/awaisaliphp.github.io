@@ -13,9 +13,7 @@
 
 <body>
   <!-- Move to up button -->
-  <div class="scroll-button">
-    <a href="#home"><i class="fas fa-arrow-up"></i></a>
-  </div>
+  
   <!-- navgaition menu -->
   <nav>
     <div class="navbar">
@@ -97,77 +95,84 @@
     </div>
   </section>
 
-  <section class="skills" id="skills">
-    <div class="content">
-      <div class="title"><span>My Skills</span></div>
-      <div class="skills-details">
-        <div class="text">
-          <div class="topic">Skills Reflect My Knowledge</div>
-          <p>
-            With over 2 years of dedicated experience in Full Stack development, I have honed my skills in building
-            dynamic and responsive web applications. My expertise extends across backend development, API integration,
-            and creating seamless user experiences with modern web technologies. I am well-versed in frameworks like
-            Laravel and Vue.js, and my background in database management and CI/CD pipelines ensures that projects I
-            undertake are both robust and scalable.
-          </p>
+<section class="skills" id="skills">
+  <div class="content">
+    <div class="title"><span>My Skills</span></div>
 
-          <div class="experience">
-            <div class="num">2+</div>
-            <div class="exp">Years Of <br> Experience</div>
-          </div>
-        </div>
+    <!-- Text Top -->
+    <div class="skills-intro">
+      <div class="topic">Skills Reflect My Knowledge</div>
+      <p>
+        With over 2 years of dedicated experience in Full Stack development, I have honed my skills in building
+        dynamic and responsive web applications. My expertise extends across backend development, API integration,
+        and creating seamless user experiences with modern web technologies. I am well-versed in frameworks like
+        Laravel and Vue.js, and my background in database management and CI/CD pipelines ensures that projects I
+        undertake are both robust and scalable.
+      </p>
 
-        <div class="skills-grid">
-          <div class="skill-box">
-            <h3>Backend Development</h3>
-            <ul>
-              <li>PHP | Laravel | CodeIgniter</li>
-              <li>Zend | Lumen</li>
-              <li>RESTful APIs</li>
-              <li>SQL | MySQL | PostgreSQL</li>
-              <li>Firebase | Database Optimization</li>
-            </ul>
-          </div>
-          <div class="skill-box">
-            <h3>Frontend Development</h3>
-            <ul>
-              <li>Vue.js</li>
-              <li>Bootstrap</li>
-              <li>HTML5 & CSS3</li>
-              <li>JavaScript</li>
-              <li>jQuery</li>
-            </ul>
-          </div>
-          <div class="skill-box">
-            <h3>DevOps & Cloud</h3>
-            <ul>
-              <li>AWS</li>
-              <li>Jenkins</li>
-              <li>Sucuri</li>
-              <li>CI/CD</li>
-              <li>Firebase</li>
-            </ul>
-          </div>
-          <div class="skill-box">
-            <h3>Tools & Version Control</h3>
-            <ul>
-              <li>Git</li>
-              <li>Agile Methodologies</li>
-              <li>Testing & Debugging</li>
-              <li>Third-Party Integrations</li>
-            </ul>
-          </div>
-        </div>
+      <div class="experience">
+        <div class="num">2+</div>
+        <div class="exp">Years Of <br> Experience</div>
       </div>
     </div>
-  </section>
+
+    <!-- Skills Grid -->
+    <div class="skills-grid">
+      <div class="skill-box">
+        <div class="icon"><i class="fas fa-server"></i></div>
+        <h3>Backend Development</h3>
+        <ul>
+          <li>PHP | Laravel | CodeIgniter</li>
+          <li>Zend | Lumen</li>
+          <li>RESTful APIs</li>
+          <li>SQL | MySQL | PostgreSQL</li>
+          <li>Firebase | DB Optimization</li>
+        </ul>
+      </div>
+      <div class="skill-box">
+        <div class="icon"><i class="fas fa-laptop-code"></i></div>
+        <h3>Frontend Development</h3>
+        <ul>
+          <li>Vue.js</li>
+          <li>Bootstrap</li>
+          <li>HTML5 & CSS3</li>
+          <li>JavaScript</li>
+          <li>jQuery</li>
+        </ul>
+      </div>
+      <div class="skill-box">
+        <div class="icon"><i class="fas fa-cloud"></i></div>
+        <h3>DevOps & Cloud</h3>
+        <ul>
+          <li>AWS</li>
+          <li>Jenkins</li>
+          <li>Sucuri</li>
+          <li>CI/CD</li>
+          <li>Firebase</li>
+        </ul>
+      </div>
+      <div class="skill-box">
+        <div class="icon"><i class="fas fa-code-branch"></i></div>
+        <h3>Tools & Version Control</h3>
+        <ul>
+          <li>Git</li>
+          <li>Agile Methodologies</li>
+          <li>Testing & Debugging</li>
+          <li>Third-Party Integrations</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
   <section class="projects" id="projects">
     <div class="content">
       <h2>My Projects</h2>
       <div class="project-boxes">
 
         <!-- Mind Scan -->
-        <div class="project-box" onclick="rotateBox(this)">
+        <div class="project-box" >
           <div class="front">
             <h3>Mind Scan</h3>
             <p>Cognitive assessment tool for behavior analysis.</p>
@@ -179,7 +184,7 @@
         </div>
 
         <!-- ProAdvisor Coach -->
-        <div class="project-box" onclick="rotateBox(this)">
+        <div class="project-box" >
           <div class="front">
             <h3>ProAdvisor Coach</h3>
             <p>Coaching platform designed for personal and professional growth.</p>
@@ -191,7 +196,7 @@
         </div>
 
         <!-- ProAdvisor Driver -->
-        <div class="project-box" onclick="rotateBox(this)">
+        <div class="project-box" >
           <div class="front">
             <h3>ProAdvisor Driver</h3>
             <p>Client success platform supporting coaches with tools and insights.</p>
@@ -203,7 +208,7 @@
         </div>
 
         <!-- Snapthecity -->
-        <div class="project-box" onclick="rotateBox(this)">
+        <div class="project-box" >
           <div class="front">
             <h3>Snapthecity</h3>
             <p>Urban photography and community engagement platform.</p>
@@ -215,7 +220,7 @@
         </div>
 
         <!-- Daily Status Report | Task Management -->
-        <div class="project-box" onclick="rotateBox(this)">
+        <div class="project-box" >
           <div class="front">
             <h3>Daily Status Report | Task Management</h3>
             <p>Project tracking and productivity management solution.</p>
@@ -227,7 +232,7 @@
         </div>
 
         <!-- Another Way Recovery Services (AWRS) -->
-        <div class="project-box" onclick="rotateBox(this)">
+        <div class="project-box" >
           <div class="front">
             <h3>AWRS</h3>
             <p>Support services for addiction recovery and mental health.</p>
@@ -239,7 +244,7 @@
         </div>
 
         <!-- IT Support Hub -->
-        <div class="project-box" onclick="rotateBox(this)">
+        <div class="project-box" >
           <div class="front">
             <h3>IT Support Hub</h3>
             <p>Comprehensive IT support and knowledge-sharing platform.</p>
@@ -279,6 +284,16 @@
       <span>Created By <a href="#">Awais Ali</a> | &#169; 2024 All Rights Reserved</span>
     </div>
   </footer>
+
+  <!-- Floating WhatsApp Button -->
+<a href="https://wa.me/923424440406" 
+   class="whatsapp-float" 
+   target="_blank" 
+   aria-label="Chat on WhatsApp">
+   <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" 
+        alt="WhatsApp" />
+</a>
+
 
   <script src="script.js"></script>
 </body>
