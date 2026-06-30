@@ -33,9 +33,9 @@
 
 [data-theme="light"] {
   --bg: #f6f7fb;
-  --bg-soft: #ffffff;
+  --bg-soft: #eef1f8;
   --surface: #ffffff;
-  --surface-2: #ffffff;
+  --surface-2: #eef1f8;
   --border: rgba(15, 23, 42, 0.1);
   --border-strong: rgba(15, 23, 42, 0.16);
   --text: #0e1220;
@@ -304,8 +304,13 @@ a:focus-visible, button:focus-visible, .filter-chip:focus-visible {
 .skill-card:hover { transform: translateY(-5px); border-color: var(--border-strong); box-shadow: var(--shadow); }
 .skill-ico { width: 46px; height: 46px; display: grid; place-items: center; border-radius: 12px; background: var(--surface-2); border: 1px solid var(--border); color: var(--accent); margin-bottom: 1rem; }
 .skill-card h3 { font-size: 1.12rem; margin-bottom: .9rem; }
-.tag-list { display: flex; flex-wrap: wrap; gap: .45rem; }
-.tag-list li { font-size: .82rem; color: var(--text-soft); background: var(--surface-2); border: 1px solid var(--border); padding: .32rem .7rem; border-radius: 999px; }
+.tag-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: .5rem; }
+.tag-list li { font-size: .82rem; color: var(--text-soft); background: var(--surface-2); border: 1px solid var(--border); padding: .34rem .7rem; border-radius: 999px; display: flex; align-items: center; justify-content: center; text-align: center; }
+
+/* Light-mode vibrancy: white cards pop against tinted section; icons + pills carry accent tint */
+[data-theme="light"] .skill-card { box-shadow: 0 12px 30px -20px rgba(20, 25, 60, 0.28); }
+[data-theme="light"] .skill-ico { background: color-mix(in srgb, var(--accent) 12%, #fff); border-color: color-mix(in srgb, var(--accent) 22%, transparent); }
+[data-theme="light"] .tag-list li { color: #313a55; background: color-mix(in srgb, var(--accent) 7%, #fff); border-color: color-mix(in srgb, var(--accent) 16%, transparent); }
 
 /* ---------- Work ---------- */
 .work-filters { display: flex; flex-wrap: wrap; gap: .55rem; margin-bottom: 2rem; }
