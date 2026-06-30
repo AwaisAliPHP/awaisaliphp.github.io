@@ -212,28 +212,23 @@ a:focus-visible, button:focus-visible, .filter-chip:focus-visible {
 
 /* Hero visual */
 .hero-visual { position: relative; }
-.photo-wrap { position: relative; max-width: 370px; margin-inline: auto; transform: rotate(-1.6deg); transition: transform .55s cubic-bezier(.2,.7,.2,1); }
-.hero-visual:hover .photo-wrap { transform: rotate(0deg); }
-/* Soft brand-coloured aura behind the photo */
+.photo-wrap { position: relative; max-width: 360px; margin-inline: auto; }
+/* The glow IS the photo's background — neon in dark mode, soft & light in light mode */
 .photo-wrap::before {
-  content: ""; position: absolute; inset: -14% -12% -8%; z-index: 0; border-radius: 50%;
-  background: radial-gradient(circle at 50% 42%, rgba(124,92,255,.55), rgba(34,211,238,.22) 52%, transparent 72%);
-  filter: blur(30px); animation: auraPulse 7s ease-in-out infinite;
+  content: ""; position: absolute; inset: -8% -6% 4%; z-index: 0; border-radius: 50% 50% 44% 44%;
+  background: radial-gradient(circle at 50% 42%, rgba(124,92,255,.72), rgba(34,211,238,.42) 46%, transparent 72%);
+  filter: blur(40px) saturate(1.35); animation: auraPulse 7s ease-in-out infinite;
 }
-@keyframes auraPulse { 0%,100% { opacity: .85; transform: scale(1); } 50% { opacity: 1; transform: scale(1.05); } }
+[data-theme="light"] .photo-wrap::before {
+  background: radial-gradient(circle at 50% 42%, rgba(124,92,255,.22), rgba(34,211,238,.14) 50%, transparent 76%);
+  filter: blur(44px); opacity: .9;
+}
+@keyframes auraPulse { 0%,100% { opacity: .82; transform: scale(1); } 50% { opacity: 1; transform: scale(1.05); } }
 .photo-wrap img {
-  position: relative; z-index: 1; width: 100%; height: auto; border-radius: 22px; aspect-ratio: 4 / 5;
-  object-fit: cover; object-position: 50% 20%; background: var(--bg-soft);
-  border: 1px solid rgba(255,255,255,.12); filter: saturate(1.07) contrast(1.03);
-  box-shadow: 0 34px 70px -28px rgba(0,0,0,.75), inset 0 0 0 1px rgba(255,255,255,.05);
+  position: relative; z-index: 1; width: 100%; height: auto; display: block;
+  filter: drop-shadow(0 20px 30px rgba(0,0,0,.55));
 }
-[data-theme="light"] .photo-wrap img { border-color: rgba(15,23,42,.08); box-shadow: 0 34px 60px -30px rgba(20,25,60,.4); }
-/* Colour grade — tints the suit in brand hues, leaves the face natural */
-.photo-wrap::after {
-  content: ""; position: absolute; inset: 0; z-index: 2; border-radius: 22px; pointer-events: none;
-  background: linear-gradient(165deg, transparent 35%, rgba(124,92,255,.5) 74%, rgba(34,211,238,.45) 100%);
-  mix-blend-mode: soft-light;
-}
+[data-theme="light"] .photo-wrap img { filter: drop-shadow(0 16px 26px rgba(20,25,60,.22)); }
 .badge-float {
   position: absolute; z-index: 3; font-size: .82rem; font-weight: 600; color: var(--text);
   background: color-mix(in srgb, var(--bg-soft) 68%, transparent); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
@@ -330,27 +325,11 @@ a:focus-visible, button:focus-visible, .filter-chip:focus-visible {
 @keyframes filterIn { from { opacity: 0; transform: translateY(12px) scale(.985); } to { opacity: 1; transform: none; } }
 @media (prefers-reduced-motion: reduce) { .work-card.filter-in { animation: none; } }
 
-/* Spotlight (featured) cards — large, full-width, alternating sides */
-.work-card.spotlight { grid-column: 1 / -1; flex-direction: row; align-items: stretch; }
-.work-card.spotlight .work-shot { flex: 1.08; padding: 1.5rem 0 1.5rem 1.5rem; display: flex; }
-.work-card.spotlight .browser { width: 100%; display: flex; flex-direction: column; border-radius: 14px; border: 1px solid var(--border); }
-.work-card.spotlight .browser img { flex: 1; height: 100%; min-height: 320px; }
-.work-card.spotlight .work-body { flex: 1; padding: 2rem; justify-content: center; }
-.work-card.spotlight h3 { font-size: clamp(1.5rem, 2.4vw, 1.9rem); }
-.work-card.spotlight .work-body > p { font-size: 1rem; }
-.work-card.spotlight.spotlight-alt { flex-direction: row-reverse; }
-.work-card.spotlight.spotlight-alt .work-shot { padding: 1.5rem 1.5rem 1.5rem 0; }
-@media (max-width: 860px) {
-  .work-card.spotlight, .work-card.spotlight.spotlight-alt { flex-direction: column; }
-  .work-card.spotlight .work-shot, .work-card.spotlight.spotlight-alt .work-shot { padding: 1.2rem 1.2rem 0; flex: none; }
-  .work-card.spotlight .browser img { min-height: 0; height: 220px; }
-}
-
 /* Impact metric chip */
 .work-metric { display: inline-flex; align-items: center; gap: .4rem; align-self: flex-start; font-size: .76rem; font-weight: 700; color: var(--accent-2); background: color-mix(in srgb, var(--accent) 13%, transparent); border: 1px solid color-mix(in srgb, var(--accent) 24%, transparent); padding: .3rem .72rem; border-radius: 999px; }
 .work-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column; transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease; }
 .work-card:hover { border-color: var(--border-strong); box-shadow: var(--shadow); }
-/* featured cards span 1 by default; .spotlight overrides to full width */
+/* all project cards share one consistent layout */
 .work-shot { padding: 1.2rem 1.2rem 0; }
 .browser { border-radius: 12px 12px 0 0; border: 1px solid var(--border); border-bottom: none; overflow: hidden; background: var(--bg-soft); box-shadow: 0 -2px 0 var(--border); }
 .browser-bar { display: flex; align-items: center; gap: 6px; padding: .55rem .8rem; border-bottom: 1px solid var(--border); background: var(--surface-2); }
