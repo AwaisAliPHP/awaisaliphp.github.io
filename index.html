@@ -1,301 +1,881 @@
 <!DOCTYPE html>
-<!-- Designined by Kapil -->
 <html lang="en" dir="ltr">
 
 <head>
-  <meta charset="UTF-8">
-  <title>Awais's Portfolio Website </title>
-  <link rel="stylesheet" href="style.css">
-  <!-- Fontawesome CDN Link -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Primary Meta -->
+  <title>Awais Ali — Full-Stack Software Engineer | Laravel · React · APIs · SaaS</title>
+  <meta name="description"
+    content="Awais Ali is a full-stack software engineer who builds scalable Laravel & React business platforms, admin dashboards, REST APIs, payment integrations, AI features and SaaS products for real client operations." />
+  <meta name="author" content="Awais Ali" />
+  <meta name="keywords"
+    content="Awais Ali, Laravel Developer, PHP Developer, React Developer, Full Stack Developer, SaaS Developer, REST API, Stripe Integration, Software Engineer, Lahore Pakistan" />
+  <meta name="theme-color" content="#0a0a0f" />
+  <link rel="canonical" href="https://awaisaliphp.github.io/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Awais Ali — Full-Stack Software Engineer" />
+  <meta property="og:description"
+    content="I build scalable Laravel & React business platforms, dashboards, APIs, payment systems, AI features and SaaS products." />
+  <meta property="og:url" content="https://awaisaliphp.github.io/" />
+  <meta property="og:image" content="https://awaisaliphp.github.io/images/profile.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Awais Ali — Full-Stack Software Engineer" />
+  <meta name="twitter:description"
+    content="Laravel & React platforms, dashboards, APIs, payments, AI and SaaS products for real businesses." />
+  <meta name="twitter:image" content="https://awaisaliphp.github.io/images/profile.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+  <link rel="alternate icon" href="favicon.ico" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <noscript>
+    <style>[data-reveal]{opacity:1!important;transform:none!important}.nav-links{position:static!important;transform:none!important;flex-direction:row!important}</style>
+  </noscript>
+
+  <!-- Structured Data (SEO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Awais Ali",
+    "jobTitle": "Full-Stack Software Engineer",
+    "url": "https://awaisaliphp.github.io/",
+    "email": "awais.ali.php@gmail.com",
+    "telephone": "+92-342-4440406",
+    "address": { "@type": "PostalAddress", "addressLocality": "Lahore", "addressCountry": "Pakistan" },
+    "worksFor": { "@type": "Organization", "name": "Applicon Soft" },
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "University of Narowal" },
+    "knowsAbout": ["Laravel", "PHP", "React", "REST APIs", "MySQL", "Stripe", "SaaS", "AI Integration"],
+    "sameAs": [
+      "https://www.linkedin.com/in/awais-ali-php/",
+      "https://github.com/awaisaliphp"
+    ]
+  }
+  </script>
 </head>
 
 <body>
-  <!-- Move to up button -->
-  
-  <!-- navgaition menu -->
-  <nav>
-    <div class="navbar">
-      <div class="logo"><a href="#">Portfolio.</a></div>
-      <ul class="menu">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <div class="cancel-btn">
-          <i class="fas fa-times"></i>
-        </div>
-      </ul>
-      <p align="right">
-        <a href="https://www.linkedin.com/in/awais-ali-php/" target="_blank" rel="noreferrer"> <img
-            src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="bash" width="40" height="40" /> </a>
-        <a href="https://github.com/awaisaliphp" target="_blank" rel="noreferrer"> <img
-            src="https://cdn.cdnlogo.com/logos/g/55/github.svg" alt="aws" width="40" height="40" /> </a>
-        <a href="#" target="_blank" rel="noreferrer"> <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Stack_Overflow_icon.svg/768px-Stack_Overflow_icon.svg.png"
-            alt="bash" width="40" height="40" /> </a>
-      </p>
-    </div>
-    <div class="menu-btn">
-      <i class="fas fa-bars"></i>
-    </div>
-  </nav>
+  <a href="#hero" class="skip-link">Skip to content</a>
 
-  <!-- Home Section Start -->
-  <section class="home" id="home">
-    <div class="home-content">
-      <div class="text">
-        <div class="text-one">Hello,</div>
-        <div class="text-two">I'm Awais Ali</div>
-        <div class="text-three">Full Stack PHP | Laravel Developer</div>
-        <div class="text-four">From Lahore, Pakistan</div>
-      </div>
-      <div class="button">
-        <!-- <button>Hire Me </button> -->
-        <!-- <a href="https://www.google.com"><button>Hire Me</button></a> -->
-        <a class="fcc-btn" href="https://www.linkedin.com/in/awais-ali-php/">Learn More</a>
-      </div>
-    </div>
-
-  </section>
-
+  <!-- Decorative animated background -->
+  <div class="bg-orbs" aria-hidden="true">
+    <span class="orb orb-1"></span>
+    <span class="orb orb-2"></span>
+    <span class="orb orb-3"></span>
+    <div class="grid-overlay"></div>
   </div>
-  <!-- About Section Start -->
-  <section class="about" id="about">
-    <div class="content">
-      <div class="title"><span>About Me</span></div>
-      <div class="about-details">
-        <div class="left">
-          <img src="images/about.JPG" alt="">
-        </div>
-        <div class="right">
-          <div class="topic">Crafting Dynamic Web Applications</div>
-          <p>Experienced Laravel and CodeIgniter developer with over 2 years of experience in multinational projects,
-            specializing in backend development and crafting dynamic web applications and RESTful APIs. Proficient in
-            Core PHP and skilled in integrating and consuming APIs, optimizing for performance, and ensuring
-            scalability.
-            Adept in frontend development using Vue.js and Bootstrap to create intuitive user interfaces. Additionally,
-            knowledgeable in AWS, Jenkins, Sucuri, and CI/CD pipelines, enhancing the deployment process and system
-            reliability.
-            Committed to delivering high-quality solutions through collaborative teamwork and innovative
-            problem-solving.
-            <br> <br>
-            Committed to delivering high-quality, scalable solutions and passionate about leveraging technology to meet
-            project goals
-            effectively.
+
+  <!-- ====================== NAVBAR ====================== -->
+  <header class="nav" id="nav">
+    <div class="container nav-inner">
+      <a href="#hero" class="brand" aria-label="Awais Ali — home">
+        <span class="brand-mark">A</span>
+        <span class="brand-text">Awais&nbsp;Ali<small>Full-Stack Engineer</small></span>
+      </a>
+
+      <nav class="nav-links" id="navLinks" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#work">Work</a>
+        <a href="#services">Services</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle color theme">
+          <svg class="i-sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="2"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="2" x2="12" y2="4.5"/><line x1="12" y1="19.5" x2="12" y2="22"/><line x1="2" y1="12" x2="4.5" y2="12"/><line x1="19.5" y1="12" x2="22" y2="12"/><line x1="4.6" y1="4.6" x2="6.4" y2="6.4"/><line x1="17.6" y1="17.6" x2="19.4" y2="19.4"/><line x1="4.6" y1="19.4" x2="6.4" y2="17.6"/><line x1="17.6" y1="6.4" x2="19.4" y2="4.6"/></g></svg>
+          <svg class="i-moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+        </button>
+        <a class="btn btn-primary nav-cta" href="#contact">Let's talk</a>
+        <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ====================== HERO ====================== -->
+    <section class="hero section" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy" data-reveal>
+          <span class="pill"><span class="dot"></span> Available for freelance &amp; full-time roles</span>
+          <h1 class="hero-title">
+            I build <span class="grad">scalable web platforms</span>, dashboards &amp; APIs that run real businesses.
+          </h1>
+          <p class="hero-sub">
+            I'm <strong>Awais Ali</strong> — a full-stack software engineer specializing in
+            <strong>Laravel</strong>, <strong>React</strong> and <strong>REST APIs</strong>. I ship admin
+            dashboards, payment systems, AI-powered features, automations and SaaS products for clients
+            across the US, UK and beyond.
           </p>
-          <div class="button">
-            <!-- <button>Download CV</button> -->
-            <a href="cv/Awais_Ali_PHP_Laravel.pdf"><button>Download CV</button></a>
+
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#work">View my work
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a class="btn btn-ghost" href="cv/Awais_Ali_PHP_Laravel.pdf" download>
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Download CV
+            </a>
+          </div>
+
+          <div class="hero-social" aria-label="Social links">
+            <a href="https://github.com/awaisaliphp" target="_blank" rel="noopener" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12 2A10 10 0 0 0 8.8 21.5c.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.3-3.4-1.3-.5-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.6 2.4 1.1 3 .9.1-.7.4-1.1.6-1.4-2.2-.300-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.7 1a9.4 9.4 0 0 1 5 0c1.9-1.3 2.7-1 2.7-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.9-2.4 4.7-4.6 5 .4.3.7.9.7 1.9v2.8c0 .3.2.6.7.5A10 10 0 0 0 12 2Z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/awais-ali-php/" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M4.98 3.5A2.5 2.5 0 1 1 5 8.5a2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm6 0h3.8v1.7h.1c.5-1 1.8-2 3.7-2 4 0 4.7 2.6 4.7 6V21h-4v-5.3c0-1.3 0-2.9-1.8-2.9s-2 1.4-2 2.8V21H9V9Z"/></svg>
+            </a>
+            <a href="https://wa.me/923424440406" target="_blank" rel="noopener" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15l-1.4 5 5.1-1.3A10 10 0 1 0 12 2Zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-1.7-.1-.4-.1-.9-.3-1.6-.6-2.7-1.2-4.5-4-4.6-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 .9-2.2c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2 0 .4-.1.5l-.3.4c-.2.2-.3.4-.1.6.2.4.9 1.4 1.9 2 .7.5 1.3.7 1.6.8.2.1.4.1.6-.1l.7-.9c.2-.2.4-.2.6-.1l1.8.9c.3.1.4.2.5.3 0 .2 0 .8-.2 1.3Z"/></svg>
+            </a>
+            <a href="mailto:awais.ali.php@gmail.com" aria-label="Email">
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M3 6h18v12H3zM3 7l9 6 9-6"/></svg>
+            </a>
+          </div>
+
+          <ul class="hero-stats" aria-label="Highlights">
+            <li><strong data-count="3" data-suffix="+">3+</strong><span>Years building software</span></li>
+            <li><strong data-count="20" data-suffix="+">20+</strong><span>Projects shipped</span></li>
+            <li><strong data-count="10" data-suffix="+">10+</strong><span>API &amp; payment integrations</span></li>
+          </ul>
+        </div>
+
+        <div class="hero-visual" data-reveal>
+          <div class="photo-wrap">
+            <img src="images/profile.jpg" alt="Portrait of Awais Ali, full-stack software engineer" width="440" height="550" />
+            <span class="badge-float badge-1">⚡ Laravel</span>
+            <span class="badge-float badge-2">⚛ React</span>
+            <span class="badge-float badge-3">🤖 AI&nbsp;/&nbsp;APIs</span>
+          </div>
+          <div class="code-card" aria-hidden="true">
+            <div class="code-dots"><i></i><i></i><i></i></div>
+            <pre><code><span class="c-key">$</span> whoami
+<span class="c-str">awais-ali</span> — full-stack engineer
+<span class="c-key">stack</span>: Laravel · React · MySQL
+<span class="c-key">focus</span>: SaaS · dashboards · APIs
+<span class="c-ok">status</span>: shipping ✔</code></pre>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- ====================== TECH MARQUEE ====================== -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Laravel</span><span>PHP</span><span>React</span><span>Next.js</span><span>React Native</span>
+        <span>CodeIgniter</span><span>MySQL</span><span>REST APIs</span><span>Stripe</span><span>OpenAI</span>
+        <span>Tailwind</span><span>Vue.js</span><span>AWS</span><span>Docker</span><span>Inertia</span>
+        <span>Laravel</span><span>PHP</span><span>React</span><span>Next.js</span><span>React Native</span>
+        <span>CodeIgniter</span><span>MySQL</span><span>REST APIs</span><span>Stripe</span><span>OpenAI</span>
+        <span>Tailwind</span><span>Vue.js</span><span>AWS</span><span>Docker</span><span>Inertia</span>
       </div>
     </div>
-  </section>
 
-<section class="skills" id="skills">
-  <div class="content">
-    <div class="title"><span>My Skills</span></div>
-
-    <!-- Text Top -->
-    <div class="skills-intro">
-      <div class="topic">Skills Reflect My Knowledge</div>
-      <p>
-        With over 2 years of dedicated experience in Full Stack development, I have honed my skills in building
-        dynamic and responsive web applications. My expertise extends across backend development, API integration,
-        and creating seamless user experiences with modern web technologies. I am well-versed in frameworks like
-        Laravel and Vue.js, and my background in database management and CI/CD pipelines ensures that projects I
-        undertake are both robust and scalable.
-      </p>
-
-      <div class="experience">
-        <div class="num">3+</div>
-        <div class="exp">Years Of <br> Experience</div>
-      </div>
-    </div>
-
-    <!-- Skills Grid -->
-    <div class="skills-grid">
-      <div class="skill-box">
-        <div class="icon"><i class="fas fa-server"></i></div>
-        <h3>Backend Development</h3>
-        <ul>
-          <li>PHP | Laravel | CodeIgniter</li>
-          <li>Zend | Lumen</li>
-          <li>RESTful APIs</li>
-          <li>SQL | MySQL | PostgreSQL</li>
-          <li>Firebase | DB Optimization</li>
-        </ul>
-      </div>
-      <div class="skill-box">
-        <div class="icon"><i class="fas fa-laptop-code"></i></div>
-        <h3>Frontend Development</h3>
-        <ul>
-          <li>Vue.js</li>
-          <li>Bootstrap</li>
-          <li>HTML5 & CSS3</li>
-          <li>JavaScript</li>
-          <li>jQuery</li>
-        </ul>
-      </div>
-      <div class="skill-box">
-        <div class="icon"><i class="fas fa-cloud"></i></div>
-        <h3>DevOps & Cloud</h3>
-        <ul>
-          <li>AWS</li>
-          <li>Jenkins</li>
-          <li>Sucuri</li>
-          <li>CI/CD</li>
-          <li>Firebase</li>
-        </ul>
-      </div>
-      <div class="skill-box">
-        <div class="icon"><i class="fas fa-code-branch"></i></div>
-        <h3>Tools & Version Control</h3>
-        <ul>
-          <li>Git</li>
-          <li>Agile Methodologies</li>
-          <li>Testing & Debugging</li>
-          <li>Third-Party Integrations</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-  <section class="projects" id="projects">
-    <div class="content">
-      <h2>My Projects</h2>
-      <div class="project-boxes">
-
-        <!-- Mind Scan -->
-        <div class="project-box" >
-          <div class="front">
-            <h3>Mind Scan</h3>
-            <p>Cognitive assessment tool for behavior analysis.</p>
-          </div>
-          <div class="back">
-            <p>Tech Stack: Python, Machine Learning</p>
-            <a href="https://proadvisor.coach/the-pac-method" target="_blank">View Project</a>
-          </div>
+    <!-- ====================== ABOUT ====================== -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow">01 — About</span>
+          <h2>Engineering software that solves real business problems.</h2>
         </div>
 
-        <!-- ProAdvisor Coach -->
-        <div class="project-box" >
-          <div class="front">
-            <h3>ProAdvisor Coach</h3>
-            <p>Coaching platform designed for personal and professional growth.</p>
-          </div>
-          <div class="back">
-            <p>Tech Stack: PHP, Laravel, MySQL</p>
-            <a href="https://proadvisor.coach/why-pac" target="_blank">View Project</a>
-          </div>
-        </div>
+        <div class="about-grid">
+          <div class="about-text" data-reveal>
+            <p>
+              I'm a software engineer at <strong>Applicon Soft</strong> with <strong>3+ years</strong> of
+              hands-on experience delivering production applications for international clients. My core strength
+              is the backend — architecting clean <strong>Laravel</strong> and <strong>CodeIgniter</strong>
+              systems, designing <strong>RESTful APIs</strong>, and modelling databases that stay fast as they scale.
+            </p>
+            <p>
+              I've contributed to <strong>10+ shipped solutions</strong>: SaaS dashboards, AI-driven content and
+              learning platforms, time-tracking and reporting tools, healthcare and business-formation systems,
+              and the mobile-app backends behind them. I'm just as comfortable on the frontend with
+              <strong>React</strong>, Inertia, Vue and Tailwind, wiring up <strong>Stripe / PayPal</strong>
+              payments, and deploying to <strong>AWS</strong> with CI/CD.
+            </p>
+            <p>
+              I care about code that other engineers can read, ship without surprises, and debug quickly under
+              pressure. If it has to handle money, users and uptime — I enjoy building it.
+            </p>
 
-        <!-- ProAdvisor Driver -->
-        <div class="project-box" >
-          <div class="front">
-            <h3>ProAdvisor Driver</h3>
-            <p>Client success platform supporting coaches with tools and insights.</p>
+            <div class="about-meta">
+              <div><span>Location</span><strong>Lahore, Pakistan · Remote</strong></div>
+              <div><span>Experience</span><strong>3+ years</strong></div>
+              <div><span>Education</span><strong>BS Computer Science — Gold Medalist</strong></div>
+              <div><span>Open to</span><strong>Freelance &amp; full-time</strong></div>
+            </div>
           </div>
-          <div class="back">
-            <p>Tech Stack: JavaScript, Vue.js, Node.js</p>
-            <a href="https://proadvisor.coach/the-pac-method" target="_blank">View Project</a>
-          </div>
-        </div>
 
-        <!-- Snapthecity -->
-        <div class="project-box" >
-          <div class="front">
-            <h3>Snapthecity</h3>
-            <p>Urban photography and community engagement platform.</p>
-          </div>
-          <div class="back">
-            <p>Tech Stack: React, Firebase, CSS</p>
-            <a href="#" target="_blank">View Project</a>
-          </div>
-        </div>
-
-        <!-- Daily Status Report | Task Management -->
-        <div class="project-box" >
-          <div class="front">
-            <h3>Daily Status Report | Task Management</h3>
-            <p>Project tracking and productivity management solution.</p>
-          </div>
-          <div class="back">
-            <p>Tech Stack: PHP, Laravel, Bootstrap</p>
-            <a href="#" target="_blank">View Project</a>
-          </div>
-        </div>
-
-        <!-- Another Way Recovery Services (AWRS) -->
-        <div class="project-box" >
-          <div class="front">
-            <h3>AWRS</h3>
-            <p>Support services for addiction recovery and mental health.</p>
-          </div>
-          <div class="back">
-            <p>Tech Stack: Ruby on Rails, PostgreSQL</p>
-            <a href="#" target="_blank">View Project</a>
-          </div>
-        </div>
-
-        <!-- IT Support Hub -->
-        <div class="project-box" >
-          <div class="front">
-            <h3>IT Support Hub</h3>
-            <p>Comprehensive IT support and knowledge-sharing platform.</p>
-          </div>
-          <div class="back">
-            <p>Tech Stack: WordPress, PHP, MySQL</p>
-            <a href="#" target="_blank">View Project</a>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-
-
-
-  <!-- Contact Me section Start -->
-  <section class="contact" id="contact">
-    <div class="content">
-      <div class="title"><span>Contact Me</span></div>
-      <div class="text">
-        <div class="topic">Have Any Project?</div>
-        <p>Why wait, lets plan to connect. Connection and community improve engagement, retention, and well-being </p>
-        <div class="button">
-          <!-- <button>Let's Chat</button> -->
-          <a class="fcc-btn" href="https://www.linkedin.com/in/awais-ali-php/">Let's Chat</a>
+          <aside class="about-side" data-reveal>
+            <figure class="about-photo">
+              <img src="images/awais-cutout.png" alt="Portrait of Awais Ali" loading="lazy" width="611" height="919" />
+            </figure>
+            <div class="value-card">
+              <h3>How I work</h3>
+              <ul class="check-list">
+                <li>Backend-first, API-driven architecture</li>
+                <li>Clean, maintainable, documented code</li>
+                <li>Secure handling of payments &amp; user data</li>
+                <li>Performance &amp; database optimization</li>
+                <li>Clear communication &amp; reliable delivery</li>
+              </ul>
+              <a class="btn btn-ghost btn-block" href="#contact">Start a project</a>
+            </div>
+          </aside>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Footer Section Start -->
-  <footer>
-    <div class="text">
-      <span>Created By <a href="#">Awais Ali</a> | &#169; 2025 All Rights Reserved</span>
+    <!-- ====================== SKILLS ====================== -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow">02 — Tech Stack</span>
+          <h2>The tools I use to ship.</h2>
+          <p class="section-lead">A pragmatic, full-stack toolkit — proven across production SaaS apps,
+            APIs and client platforms.</p>
+        </div>
+
+        <div class="skills-grid">
+          <article class="skill-card" data-reveal>
+            <div class="skill-ico">
+              <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </div>
+            <h3>Backend</h3>
+            <ul class="tag-list">
+              <li>PHP</li><li>Laravel</li><li>CodeIgniter</li><li>Lumen</li><li>Zend</li>
+              <li>REST APIs</li><li>Sanctum</li><li>Passport OAuth2</li><li>Filament</li>
+            </ul>
+          </article>
+
+          <article class="skill-card" data-reveal>
+            <div class="skill-ico">
+              <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M8 9l-4 3 4 3m8-6 4 3-4 3M14 5l-4 14"/></svg>
+            </div>
+            <h3>Frontend</h3>
+            <ul class="tag-list">
+              <li>React</li><li>TypeScript</li><li>Next.js</li><li>Inertia</li><li>Vue.js</li>
+              <li>Tailwind CSS</li><li>Bootstrap</li><li>Alpine.js</li><li>jQuery</li>
+            </ul>
+          </article>
+
+          <article class="skill-card" data-reveal>
+            <div class="skill-ico">
+              <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><ellipse cx="12" cy="6" rx="8" ry="3" fill="none" stroke="currentColor" stroke-width="2"/><path fill="none" stroke="currentColor" stroke-width="2" d="M4 6v12c0 1.7 3.6 3 8 3s8-1.3 8-3V6M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg>
+            </div>
+            <h3>Data &amp; AI</h3>
+            <ul class="tag-list">
+              <li>MySQL</li><li>PostgreSQL</li><li>Redis</li><li>Firebase</li>
+              <li>OpenAI</li><li>RAG / Pinecone</li><li>Query optimization</li>
+            </ul>
+          </article>
+
+          <article class="skill-card" data-reveal>
+            <div class="skill-ico">
+              <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path fill="none" stroke="currentColor" stroke-width="2" d="M3 9h18"/></svg>
+            </div>
+            <h3>Integrations</h3>
+            <ul class="tag-list">
+              <li>Stripe</li><li>PayPal</li><li>Adyen</li><li>Twilio</li><li>GoHighLevel</li>
+              <li>Shopify</li><li>Pusher</li><li>ClickUp</li><li>Google APIs</li>
+            </ul>
+          </article>
+
+          <article class="skill-card" data-reveal>
+            <div class="skill-ico">
+              <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 16a4 4 0 0 1 1-7.9A5 5 0 0 1 15 7a4 4 0 0 1 4 9H6"/></svg>
+            </div>
+            <h3>Cloud &amp; DevOps</h3>
+            <ul class="tag-list">
+              <li>AWS (S3)</li><li>Docker</li><li>Sail</li><li>CI/CD</li><li>Jenkins</li>
+              <li>Sucuri</li><li>Horizon / Queues</li>
+            </ul>
+          </article>
+
+          <article class="skill-card" data-reveal>
+            <div class="skill-ico">
+              <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="6" cy="6" r="2.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="6" cy="18" r="2.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="18" cy="12" r="2.5" fill="none" stroke="currentColor" stroke-width="2"/><path fill="none" stroke="currentColor" stroke-width="2" d="M8 7.5 15.5 11M8 16.5 15.5 13"/></svg>
+            </div>
+            <h3>Workflow</h3>
+            <ul class="tag-list">
+              <li>Git</li><li>Agile / Scrum</li><li>Testing &amp; Debugging</li>
+              <li>Vite / Webpack</li><li>Code Review</li><li>Postman</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== FEATURED WORK ====================== -->
+    <section class="section" id="work">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow">03 — Selected Work</span>
+          <h2>Products &amp; platforms I've helped build.</h2>
+          <p class="section-lead">Real applications in production — built solo or as part of engineering teams
+            at Applicon Soft. Sensitive client details are intentionally summarized.</p>
+        </div>
+
+        <div class="work-grid">
+
+          <!-- 1. SocialRocket AI -->
+          <article class="work-card feature" data-reveal data-tilt>
+            <div class="work-shot">
+              <div class="browser">
+                <div class="browser-bar"><i></i><i></i><i></i><span>socialrocketai.com</span></div>
+                <img src="images/projects/socialrocket.png" loading="lazy" alt="SocialRocket AI dashboard with scheduled social posts and website monitoring" />
+              </div>
+            </div>
+            <div class="work-body">
+              <div class="work-tags"><span>Laravel</span><span>AI / OpenAI</span><span>SaaS</span></div>
+              <h3>SocialRocket&nbsp;AI</h3>
+              <p class="work-role">AI Social-Media Automation Platform</p>
+              <p>A SaaS dashboard that lets businesses plan, generate and schedule social content across
+                platforms, manage customer accounts, and monitor website uptime — all from one panel. I
+                worked on the content scheduling engine, media library, customer management and the
+                monitoring/analytics views.</p>
+              <ul class="work-feats">
+                <li>AI-assisted post creation &amp; multi-platform scheduling</li>
+                <li>Media library, approval queue &amp; rejected-post handling</li>
+                <li>Website uptime monitoring with status analytics</li>
+              </ul>
+              <a class="work-link" href="https://socialrocketai.com/" target="_blank" rel="noopener">Visit live ↗</a>
+            </div>
+          </article>
+
+          <!-- 2. TrackPilot -->
+          <article class="work-card feature" data-reveal data-tilt>
+            <div class="work-shot">
+              <div class="browser">
+                <div class="browser-bar"><i></i><i></i><i></i><span>trackpilotai.com</span></div>
+                <img src="images/projects/trackpilot.png" loading="lazy" alt="TrackPilot project & time-tracking dashboard" />
+              </div>
+            </div>
+            <div class="work-body">
+              <div class="work-tags"><span>Laravel 11</span><span>React + TS</span><span>Tauri Desktop</span></div>
+              <h3>TrackPilot</h3>
+              <p class="work-role">Time Tracking, Projects &amp; Invoicing</p>
+              <p>A full-stack platform for agencies and freelancers to track time, manage projects and tickets,
+                handle attendance and generate invoices — with a companion desktop app for offline tracking.
+                Built on a Laravel 11 API with a React + TypeScript frontend and a Tauri desktop client.</p>
+              <ul class="work-feats">
+                <li>Time logging, timesheets &amp; PDF/Excel invoice export</li>
+                <li>Role-based access for freelancers, employees &amp; managers</li>
+                <li>Real-time updates via Pusher; S3 media storage</li>
+              </ul>
+              <a class="work-link" href="https://trackpilotai.com/" target="_blank" rel="noopener">Visit live ↗</a>
+            </div>
+          </article>
+
+          <!-- 3. DSR Portal -->
+          <article class="work-card feature" data-reveal data-tilt>
+            <div class="work-shot">
+              <div class="browser">
+                <div class="browser-bar"><i></i><i></i><i></i><span>dsr.appliconsoft.com</span></div>
+                <img src="images/projects/dsr.png" loading="lazy" alt="DSR Portal — daily status report and project Kanban dashboard" />
+              </div>
+            </div>
+            <div class="work-body">
+              <div class="work-tags"><span>CodeIgniter 8</span><span>Stripe</span><span>Pusher</span></div>
+              <h3>DSR Portal</h3>
+              <p class="work-role">Team Reporting &amp; Project Management SaaS</p>
+              <p>A multi-tenant reporting platform where employees submit daily status updates and managers
+                roll them into weekly executive reports — complete with project Kanban boards, client access,
+                subscription billing and an AI writing assistant.</p>
+              <ul class="work-feats">
+                <li>Role dashboards: admin, manager, employee &amp; client</li>
+                <li>Daily updates → auto-generated weekly CTO reports</li>
+                <li>Stripe subscription billing &amp; real-time notifications</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- 4. PACX / ProAdvisor Coach -->
+          <article class="work-card feature" data-reveal data-tilt>
+            <div class="work-shot">
+              <div class="browser">
+                <div class="browser-bar"><i></i><i></i><i></i><span>pacx.proadvisorcoach.com</span></div>
+                <img src="images/projects/pacx.png" loading="lazy" alt="ProAdvisor Coach (PACX) admin dashboard — platform activity chart and user analytics" />
+              </div>
+            </div>
+            <div class="work-body">
+              <div class="work-tags"><span>Laravel 12</span><span>OpenAI + Pinecone</span><span>REST API</span></div>
+              <h3>PACX — ProAdvisor Coach</h3>
+              <p class="work-role">Gamified AI Learning Platform</p>
+              <p>A progress-based coaching platform where admins design levels and tasks (read / upload / quiz)
+                and users climb a leaderboard earning coins. Includes a RAG knowledge base that ingests PDFs,
+                docs and video, powered by OpenAI embeddings and a Pinecone vector store, exposed through a
+                Sanctum-secured API for mobile.</p>
+              <ul class="work-feats">
+                <li>Sequenced level/task engine with coin rewards &amp; leaderboard</li>
+                <li>RAG AI assistant (OpenAI + Pinecone) over uploaded content</li>
+                <li>Vision OCR &amp; media transcription pipelines</li>
+              </ul>
+              <a class="work-link" href="https://pacx.proadvisorcoach.com/" target="_blank" rel="noopener">Visit live ↗</a>
+            </div>
+          </article>
+
+          <!-- 5. Bizee / Incfile -->
+          <article class="work-card feature" data-reveal data-tilt>
+            <div class="work-shot">
+              <div class="browser">
+                <div class="browser-bar"><i></i><i></i><i></i><span>bizee.com</span></div>
+                <img src="images/projects/bizee.png" loading="lazy" alt="Bizee (formerly Incfile) business-formation platform — Launch your LLC in minutes" />
+              </div>
+            </div>
+            <div class="work-body">
+              <div class="work-tags"><span>Laravel</span><span>Adyen / Stripe</span><span>Partner API</span></div>
+              <h3>Bizee — Business Formation</h3>
+              <p class="work-role">Enterprise LLC / Corp Formation Platform</p>
+              <p>Contributed to the core engine and partner API behind a US business-formation product —
+                automating LLC/Corp filing, registered-agent services, compliance documents and a digital
+                mailroom, with OAuth2-secured partner order intake and webhook delivery.</p>
+              <ul class="work-feats">
+                <li>Order intake, validation &amp; status pass-through API</li>
+                <li>Payments via Adyen &amp; Stripe; document OCR &amp; e-sign</li>
+                <li>OAuth2, API-key rotation &amp; HMAC-signed webhooks</li>
+              </ul>
+              <a class="work-link" href="https://bizee.com/" target="_blank" rel="noopener">Visit live ↗</a>
+            </div>
+          </article>
+
+          <!-- 6. Snap The City -->
+          <article class="work-card feature" data-reveal data-tilt>
+            <div class="work-shot">
+              <div class="browser">
+                <div class="browser-bar"><i></i><i></i><i></i><span>snapthecityapp.com</span></div>
+                <img src="images/projects/snapthecity.png" loading="lazy" alt="Snap The City admin dashboard — 34,000+ businesses, locations and community hubs" />
+              </div>
+            </div>
+            <div class="work-body">
+              <div class="work-tags"><span>CodeIgniter</span><span>Firebase</span><span>Mobile API</span></div>
+              <h3>Snap The City</h3>
+              <p class="work-role">Location-Based Business Directory + App</p>
+              <p>A location-aware platform that registers businesses and surfaces them to nearby users on mobile,
+                with promotions, community &amp; sports hubs and location-based ads. I built the REST APIs and
+                geolocation logic powering the mobile app, with Firebase push notifications and click analytics.</p>
+              <ul class="work-feats">
+                <li>Proximity search &amp; category-based business discovery</li>
+                <li>Mobile-app REST APIs, favorites &amp; community feeds</li>
+                <li>Firebase push notifications &amp; click tracking</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- 7. CorpCareConnect -->
+          <article class="work-card" data-reveal data-tilt>
+            <div class="work-body">
+              <div class="card-emoji" style="--c1:#06b6d4;--c2:#6366f1">🏥</div>
+              <div class="work-tags"><span>CodeIgniter</span><span>Firebase FCM</span><span>AWS · JWT</span></div>
+              <h3>CorpCareConnect</h3>
+              <p class="work-role">Healthcare / Corporate Care API</p>
+              <p>A REST API backend for a large healthcare client — handling employee profiles, company
+                announcements, a video resource library and real-time chat, with JWT auth, AWS S3 storage and
+                Firebase Cloud Messaging for the companion mobile app.</p>
+              <ul class="work-feats">
+                <li>JWT-secured auth, profiles &amp; company directories</li>
+                <li>Real-time chat rooms &amp; push notifications (FCM)</li>
+                <li>Video/resource management on AWS S3</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- 8. Build Delivery -->
+          <article class="work-card" data-reveal data-tilt>
+            <div class="work-body">
+              <div class="card-emoji" style="--c1:#eab308;--c2:#f97316">🏗️</div>
+              <div class="work-tags"><span>CodeIgniter</span><span>Stripe · Twilio</span><span>GoHighLevel</span></div>
+              <h3>Build Delivery</h3>
+              <p class="work-role">Property-Development Collaboration SaaS</p>
+              <p>A multi-tenant SaaS API for property &amp; construction teams — managing properties, project
+                phases, boards, team channels and invoicing, with deep third-party integrations including
+                video conferencing, SMS, e-signature and CRM sync.</p>
+              <ul class="work-feats">
+                <li>Property, phase &amp; board collaboration with invoicing</li>
+                <li>Stripe payments, Twilio SMS &amp; Dolby video sessions</li>
+                <li>GoHighLevel CRM webhooks &amp; HelloSign e-sign</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- 9. ShortlistMe -->
+          <article class="work-card feature" data-reveal data-tilt>
+            <div class="work-shot">
+              <div class="browser">
+                <div class="browser-bar"><i></i><i></i><i></i><span>shortlistme.com</span></div>
+                <img src="images/projects/shortlistme.png" loading="lazy" alt="ShortlistMe recruitment platform — skills-based job matching homepage" />
+              </div>
+            </div>
+            <div class="work-body">
+              <div class="work-tags"><span>CodeIgniter</span><span>Stripe</span><span>AWS · Pusher</span></div>
+              <h3>ShortlistMe</h3>
+              <p class="work-role">Skills-Based Recruitment &amp; Candidate Platform</p>
+              <p>A recruitment platform that connects job seekers and employers by matching on <em>real skills</em>
+                rather than keywords. Behind it sits a large admin suite (40+ controllers) handling campaigns,
+                candidate sourcing, credit packages and email marketing. I worked across the candidate workflow,
+                credit-based billing and the campaign engine.</p>
+              <ul class="work-feats">
+                <li>Skills-driven candidate matching &amp; employer search</li>
+                <li>Credit packages with Stripe checkout &amp; finance tracking</li>
+                <li>Email-campaign builder, templates &amp; bounce handling</li>
+                <li>Role-based admin, blog module &amp; real-time updates (Pusher)</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- 10. PathFinder Pro -->
+          <article class="work-card feature" data-reveal data-tilt>
+            <div class="work-shot">
+              <div class="browser">
+                <div class="browser-bar"><i></i><i></i><i></i><span>app.thepathfinderhub.com</span></div>
+                <img src="images/projects/pathfinder.png" loading="lazy" alt="PathFinder Pro dashboard — scholarship tracking, journey planner and AI voice assistant" />
+              </div>
+            </div>
+            <div class="work-body">
+              <div class="work-tags"><span>React</span><span>Redux</span><span>Stripe · AI Voice</span></div>
+              <h3>PathFinder Pro</h3>
+              <p class="work-role">Career, University &amp; Scholarship Platform</p>
+              <p>A React single-page app that guides students through their education journey — discovering
+                universities and scholarships, planning a step-by-step path, and tracking applications on a
+                visual dashboard. Includes an AI voice assistant, resume preview and a payment-gated premium tier.</p>
+              <ul class="work-feats">
+                <li>Journey planner with university &amp; scholarship discovery</li>
+                <li>Application tracking (applied / accepted / rejected) &amp; calendar</li>
+                <li>AI voice assistant, resume export &amp; news feed</li>
+                <li>Stripe payments, charts &amp; role-based dashboards</li>
+              </ul>
+              <a class="work-link" href="https://app.thepathfinderhub.com/" target="_blank" rel="noopener">Visit live ↗</a>
+            </div>
+          </article>
+
+          <!-- 11. Mazuzee -->
+          <article class="work-card feature" data-reveal data-tilt>
+            <div class="work-shot">
+              <div class="browser">
+                <div class="browser-bar"><i></i><i></i><i></i><span>mazuzee.com</span></div>
+                <img src="images/projects/mazuzee.png" loading="lazy" alt="Mazuzee marine & fishing equipment online store homepage" />
+              </div>
+            </div>
+            <div class="work-body">
+              <div class="work-tags"><span>OpenCart</span><span>PHP · MySQL</span><span>E-Commerce</span></div>
+              <h3>Mazuzee</h3>
+              <p class="work-role">Marine &amp; Fishing Equipment Store</p>
+              <p>A storefront for a UAE-based marine &amp; fishing equipment distributor — a multi-category
+                catalogue (Marine, Fishing), multi-brand showroom and a quote-cart enquiry flow for trade buyers.
+                I customized the OpenCart platform: catalogue &amp; brand pages, payment options, storefront UI
+                and performance tuning.</p>
+              <ul class="work-feats">
+                <li>Marine &amp; fishing catalogue with multi-brand showroom</li>
+                <li>Quote-cart enquiry workflow for B2B/trade buyers</li>
+                <li>Multi-gateway payments, product media &amp; multi-language</li>
+              </ul>
+              <a class="work-link" href="https://www.mazuzee.com/" target="_blank" rel="noopener">Visit live ↗</a>
+            </div>
+          </article>
+
+          <!-- 12. Vital -->
+          <article class="work-card" data-reveal data-tilt>
+            <div class="work-body">
+              <div class="card-emoji" style="--c1:#10b981;--c2:#22d3ee">📡</div>
+              <div class="work-tags"><span>Laravel 12</span><span>Cashier · Stripe</span><span>WHOIS · Horizon</span></div>
+              <h3>Vital</h3>
+              <p class="work-role">SaaS Uptime &amp; Domain Monitoring</p>
+              <p>A subscription SaaS that monitors website uptime and domain health, surfacing WHOIS data,
+                monitoring history and lead insights — built on Laravel 12 with tiered Stripe Cashier billing,
+                automated up/downgrades and queued background checks.</p>
+              <ul class="work-feats">
+                <li>Multi-tier subscriptions with Cashier (upgrade / downgrade crons)</li>
+                <li>Uptime &amp; WHOIS / domain monitoring with history</li>
+                <li>Lead tracking, blog CMS &amp; queued jobs via Horizon</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- 12. HRM -->
+          <article class="work-card" data-reveal data-tilt>
+            <div class="work-body">
+              <div class="card-emoji" style="--c1:#6366f1;--c2:#a855f7">👥</div>
+              <div class="work-tags"><span>Zend / PHP</span><span>MySQL</span><span>Enterprise</span></div>
+              <h3>iHRM</h3>
+              <p class="work-role">Enterprise HR &amp; Attendance System</p>
+              <p>A large-scale human-resource platform managing the full employee lifecycle — from org charts and
+                attendance-machine integration to leave, payroll, performance reviews and training. A deep,
+                role-controlled enterprise codebase (130+ models) I maintained and extended.</p>
+              <ul class="work-feats">
+                <li>Employee profiles, org hierarchy &amp; ACL role management</li>
+                <li>Attendance-device integration &amp; correction workflows</li>
+                <li>Leave, payroll/salary reviews &amp; performance appraisals</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+
+        <!-- More projects -->
+        <div class="more-work" data-reveal>
+          <h3>More things I've built</h3>
+          <div class="more-grid">
+            <span>🛒 Laravel E-Commerce — multi-merchant API with Filament admin, Midtrans &amp; shipping</span>
+            <span>📊 BNI Analytics — FastAPI + React member-performance scoring &amp; predictions</span>
+            <span>📝 Resume Builder API — CodeIgniter REST API with Stripe &amp; OpenAI</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== SERVICES ====================== -->
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow">04 — Services</span>
+          <h2>What I can build for you.</h2>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card" data-reveal>
+            <span class="service-num">01</span>
+            <h3>Web App Development</h3>
+            <p>End-to-end Laravel &amp; CodeIgniter applications — clean architecture, robust business logic
+              and a codebase your team can maintain.</p>
+          </article>
+          <article class="service-card" data-reveal>
+            <span class="service-num">02</span>
+            <h3>Admin Dashboards &amp; SaaS</h3>
+            <p>Multi-tenant SaaS products, role-based admin panels and analytics dashboards in React, Inertia
+              and Tailwind.</p>
+          </article>
+          <article class="service-card" data-reveal>
+            <span class="service-num">03</span>
+            <h3>REST API Design</h3>
+            <p>Secure, well-documented APIs (Sanctum / OAuth2) that power web frontends and mobile apps, with
+              versioning and webhooks.</p>
+          </article>
+          <article class="service-card" data-reveal>
+            <span class="service-num">04</span>
+            <h3>Payments &amp; Billing</h3>
+            <p>Stripe, PayPal &amp; Adyen integrations — subscriptions, checkout, invoicing and secure
+              payment workflows.</p>
+          </article>
+          <article class="service-card" data-reveal>
+            <span class="service-num">05</span>
+            <h3>AI &amp; Automation</h3>
+            <p>OpenAI-powered features, RAG knowledge bases, and automated workflows / integrations with tools
+              like GoHighLevel.</p>
+          </article>
+          <article class="service-card" data-reveal>
+            <span class="service-num">06</span>
+            <h3>Deployment &amp; Debugging</h3>
+            <p>AWS deployment, Docker, CI/CD pipelines, performance tuning and rescuing projects that are
+              stuck or breaking in production.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== EXPERIENCE ====================== -->
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow">05 — Experience</span>
+          <h2>Where I've worked.</h2>
+        </div>
+
+        <div class="timeline">
+          <div class="tl-item" data-reveal>
+            <div class="tl-dot"></div>
+            <div class="tl-card">
+              <div class="tl-top"><h3>Software Engineer — PHP / Laravel</h3><span class="tl-date">Oct 2023 — Present</span></div>
+              <p class="tl-org">Applicon Soft · Lahore, Pakistan</p>
+              <ul class="check-list">
+                <li>Contributed to 10+ shipped solutions in under two years across SaaS, healthcare &amp; mobile.</li>
+                <li>Built websites and RESTful APIs powering location-based mobile apps.</li>
+                <li>Implemented payments with Stripe, PayPal and other gateways.</li>
+                <li>Delivered customized solutions for enterprise clients including a major hospital system.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="tl-item" data-reveal>
+            <div class="tl-dot"></div>
+            <div class="tl-card">
+              <div class="tl-top"><h3>Software Engineer Intern</h3><span class="tl-date">Jan 2022 — Aug 2022</span></div>
+              <p class="tl-org">PAK Agritech Ventures · Narowal, Pakistan</p>
+              <ul class="check-list">
+                <li>Built responsive, cross-browser web pages and dynamic JavaScript interfaces.</li>
+                <li>Developed and managed RESTful APIs with Laravel; optimized server-side operations.</li>
+                <li>Collaborated on code reviews, debugging and third-party API integrations.</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== EDUCATION & CERTIFICATIONS ====================== -->
+    <section class="section" id="education">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow">06 — Education &amp; Certifications</span>
+          <h2>Foundations &amp; continued learning.</h2>
+        </div>
+
+        <div class="edu-layout">
+          <!-- Education -->
+          <article class="edu-card" data-reveal>
+            <div class="edu-badge" aria-hidden="true">🎓</div>
+            <div class="tl-top"><h3>BS, Computer Science</h3><span class="tl-date">2019 — 2023</span></div>
+            <p class="tl-org">University of Narowal · Narowal, Pakistan</p>
+            <p class="edu-honor"><span class="medal">🏅 Gold Medalist</span><span class="cgpa">CGPA 3.74 / 4.0</span></p>
+            <ul class="check-list">
+              <li>Graduated top of the program — awarded the <strong>Gold Medal</strong> for academic excellence.</li>
+              <li>Recognized as Academic Champion and honored for leadership at university CS events.</li>
+            </ul>
+          </article>
+
+          <!-- Certifications -->
+          <div class="cert-wrap" data-reveal>
+            <h3 class="cert-heading">Licenses &amp; Certifications <span>· Coursera</span></h3>
+            <div class="cert-grid">
+
+              <article class="cert-card">
+                <div class="cert-top"><span class="cert-issuer">Coursera</span><span class="cert-date">Oct 2023</span></div>
+                <h4>Building a Dynamic Web App using PHP &amp; MySQL</h4>
+                <div class="cert-skills"><span>PHP Applications</span><span>MySQLi</span></div>
+                <p class="cert-id">ID · 3Q35ZMZ6JVB5</p>
+                <a class="cert-link" href="https://www.coursera.org/account/accomplishments/certificate/3Q35ZMZ6JVB5" target="_blank" rel="noopener">Show credential ↗</a>
+              </article>
+
+              <article class="cert-card">
+                <div class="cert-top"><span class="cert-issuer">Coursera</span><span class="cert-date">Sep 2023</span></div>
+                <h4>App Engine: Qwik Start — PHP</h4>
+                <div class="cert-skills"><span>Google Cloud (GCP)</span><span>MySQLi</span></div>
+                <p class="cert-id">ID · G7BSRP8H3D3U</p>
+                <a class="cert-link" href="https://www.coursera.org/account/accomplishments/certificate/G7BSRP8H3D3U" target="_blank" rel="noopener">Show credential ↗</a>
+              </article>
+
+              <article class="cert-card">
+                <div class="cert-top"><span class="cert-issuer">Coursera</span><span class="cert-date">Sep 2023</span></div>
+                <h4>Python for Data Science, AI &amp; Development</h4>
+                <div class="cert-skills"><span>Python</span><span>Knowledge Base</span></div>
+                <p class="cert-id">ID · 2R556NSXEUMY</p>
+                <a class="cert-link" href="https://www.coursera.org/account/accomplishments/certificate/2R556NSXEUMY" target="_blank" rel="noopener">Show credential ↗</a>
+              </article>
+
+              <article class="cert-card">
+                <div class="cert-top"><span class="cert-issuer">Coursera</span><span class="cert-date">Aug 2023</span></div>
+                <h4>AI For Everyone</h4>
+                <div class="cert-skills"><span>Artificial Intelligence</span><span>Knowledge Base</span></div>
+                <p class="cert-id">ID · ZK9WLU4V9QLT</p>
+                <a class="cert-link" href="https://www.coursera.org/account/accomplishments/certificate/ZK9WLU4V9QLT" target="_blank" rel="noopener">Show credential ↗</a>
+              </article>
+
+              <article class="cert-card">
+                <div class="cert-top"><span class="cert-issuer">Coursera</span><span class="cert-date">Aug 2023</span></div>
+                <h4>Introduction to Artificial Intelligence (AI)</h4>
+                <div class="cert-skills"><span>Knowledge Base</span></div>
+                <p class="cert-id">ID · X9ACUG7F7A98</p>
+                <a class="cert-link" href="https://www.coursera.org/account/accomplishments/certificate/X9ACUG7F7A98" target="_blank" rel="noopener">Show credential ↗</a>
+              </article>
+
+              <article class="cert-card">
+                <div class="cert-top"><span class="cert-issuer">Coursera</span><span class="cert-date">Aug 2023</span></div>
+                <h4>ChatGPT for Beginners: SciFi Writing with Dall-E</h4>
+                <div class="cert-skills"><span>Prompt Engineering</span><span>Knowledge Base</span></div>
+                <p class="cert-id">ID · KF3572XV43FE</p>
+                <a class="cert-link" href="https://www.coursera.org/account/accomplishments/certificate/KF3572XV43FE" target="_blank" rel="noopener">Show credential ↗</a>
+              </article>
+
+              <article class="cert-card">
+                <div class="cert-top"><span class="cert-issuer">Coursera</span><span class="cert-date">Aug 2023</span></div>
+                <h4>Understanding Research Methods</h4>
+                <div class="cert-skills"><span>Research Methods</span></div>
+                <p class="cert-id">ID · NDWNE48827WJ</p>
+                <a class="cert-link" href="https://www.coursera.org/account/accomplishments/certificate/NDWNE48827WJ" target="_blank" rel="noopener">Show credential ↗</a>
+              </article>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== CONTACT ====================== -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="contact-card" data-reveal>
+          <div class="contact-glow" aria-hidden="true"></div>
+          <span class="eyebrow">07 — Contact</span>
+          <h2>Have a project in mind? Let's build it.</h2>
+          <p>Whether you need a new platform built, an API integrated, or an existing app rescued and
+            scaled — I'd love to hear about it. I usually reply within a day.</p>
+
+          <div class="contact-actions">
+            <a class="btn btn-primary" href="mailto:awais.ali.php@gmail.com">
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M3 6h18v12H3zM3 7l9 6 9-6"/></svg>
+              Email me
+            </a>
+            <a class="btn btn-ghost" href="https://wa.me/923424440406" target="_blank" rel="noopener">
+              WhatsApp
+            </a>
+            <a class="btn btn-ghost" href="https://www.linkedin.com/in/awais-ali-php/" target="_blank" rel="noopener">
+              LinkedIn
+            </a>
+          </div>
+
+          <ul class="contact-list">
+            <li><span>Email</span><a href="mailto:awais.ali.php@gmail.com">awais.ali.php@gmail.com</a></li>
+            <li><span>Phone</span><a href="tel:+923424440406">+92&nbsp;342&nbsp;4440406</a></li>
+            <li><span>Location</span><strong>Lahore, Pakistan</strong></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ====================== FOOTER ====================== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a href="#hero" class="brand">
+        <span class="brand-mark">A</span>
+        <span class="brand-text">Awais&nbsp;Ali</span>
+      </a>
+      <p class="footer-copy">© <span id="year">2026</span> Awais Ali. Built &amp; designed from scratch.</p>
+      <div class="footer-social">
+        <a href="https://github.com/awaisaliphp" target="_blank" rel="noopener" aria-label="GitHub">GitHub</a>
+        <a href="https://www.linkedin.com/in/awais-ali-php/" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
+        <a href="mailto:awais.ali.php@gmail.com" aria-label="Email">Email</a>
+      </div>
     </div>
   </footer>
 
-  <!-- Floating WhatsApp Button -->
-<a href="https://wa.me/923424440406" 
-   class="whatsapp-float" 
-   target="_blank" 
-   aria-label="Chat on WhatsApp">
-   <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" 
-        alt="WhatsApp" />
-</a>
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/923424440406" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path fill="#fff" d="M12 2a10 10 0 0 0-8.6 15l-1.4 5 5.1-1.3A10 10 0 1 0 12 2Zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-1.7-.1-.4-.1-.9-.3-1.6-.6-2.7-1.2-4.5-4-4.6-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 .9-2.2c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2 0 .4-.1.5l-.3.4c-.2.2-.3.4-.1.6.2.4.9 1.4 1.9 2 .7.5 1.3.7 1.6.8.2.1.4.1.6-.1l.7-.9c.2-.2.4-.2.6-.1l1.8.9c.3.1.4.2.5.3 0 .2 0 .8-.2 1.3Z"/></svg>
+  </a>
 
+  <!-- Scroll to top -->
+  <button class="to-top" id="toTop" type="button" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
 
-  <script src="script.js"></script>
+  <script src="assets/js/main.js" defer></script>
 </body>
 
 </html>
