@@ -212,24 +212,38 @@ a:focus-visible, button:focus-visible, .filter-chip:focus-visible {
 
 /* Hero visual */
 .hero-visual { position: relative; }
-.photo-wrap { position: relative; max-width: 380px; margin-inline: auto; }
+.photo-wrap { position: relative; max-width: 370px; margin-inline: auto; transform: rotate(-1.6deg); transition: transform .55s cubic-bezier(.2,.7,.2,1); }
+.hero-visual:hover .photo-wrap { transform: rotate(0deg); }
+/* Soft brand-coloured aura behind the photo */
 .photo-wrap::before {
-  content: ""; position: absolute; inset: -3px; border-radius: 26px;
-  background: var(--grad); opacity: .9; filter: blur(2px); z-index: 0;
+  content: ""; position: absolute; inset: -14% -12% -8%; z-index: 0; border-radius: 50%;
+  background: radial-gradient(circle at 50% 42%, rgba(124,92,255,.55), rgba(34,211,238,.22) 52%, transparent 72%);
+  filter: blur(30px); animation: auraPulse 7s ease-in-out infinite;
 }
+@keyframes auraPulse { 0%,100% { opacity: .85; transform: scale(1); } 50% { opacity: 1; transform: scale(1.05); } }
 .photo-wrap img {
-  position: relative; z-index: 1; width: 100%; height: auto; border-radius: 24px; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 22%;
-  background: var(--bg-soft);
+  position: relative; z-index: 1; width: 100%; height: auto; border-radius: 22px; aspect-ratio: 4 / 5;
+  object-fit: cover; object-position: 50% 20%; background: var(--bg-soft);
+  border: 1px solid rgba(255,255,255,.12); filter: saturate(1.07) contrast(1.03);
+  box-shadow: 0 34px 70px -28px rgba(0,0,0,.75), inset 0 0 0 1px rgba(255,255,255,.05);
+}
+[data-theme="light"] .photo-wrap img { border-color: rgba(15,23,42,.08); box-shadow: 0 34px 60px -30px rgba(20,25,60,.4); }
+/* Colour grade — tints the suit in brand hues, leaves the face natural */
+.photo-wrap::after {
+  content: ""; position: absolute; inset: 0; z-index: 2; border-radius: 22px; pointer-events: none;
+  background: linear-gradient(165deg, transparent 35%, rgba(124,92,255,.5) 74%, rgba(34,211,238,.45) 100%);
+  mix-blend-mode: soft-light;
 }
 .badge-float {
-  position: absolute; z-index: 2; font-size: .82rem; font-weight: 600; color: var(--text);
-  background: color-mix(in srgb, var(--bg-soft) 80%, transparent); backdrop-filter: blur(10px);
-  border: 1px solid var(--border-strong); padding: .5rem .85rem; border-radius: 12px; box-shadow: var(--shadow);
-  animation: bob 4s ease-in-out infinite;
+  position: absolute; z-index: 3; font-size: .82rem; font-weight: 600; color: var(--text);
+  background: color-mix(in srgb, var(--bg-soft) 68%, transparent); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255,255,255,.18); padding: .5rem .9rem; border-radius: 12px;
+  box-shadow: 0 12px 28px -10px rgba(0,0,0,.6); animation: bob 4s ease-in-out infinite;
 }
-.badge-1 { top: 12%; left: -6%; }
-.badge-2 { top: 44%; right: -8%; animation-delay: .8s; }
-.badge-3 { bottom: 8%; left: 2%; animation-delay: 1.6s; }
+[data-theme="light"] .badge-float { border-color: rgba(15,23,42,.1); }
+.badge-1 { top: 10%; left: -8%; }
+.badge-2 { top: 46%; right: -9%; animation-delay: .8s; }
+.badge-3 { bottom: 9%; left: 0; animation-delay: 1.6s; }
 @keyframes bob { 0%,100%{ transform: translateY(0);} 50%{ transform: translateY(-9px);} }
 
 .code-card {
