@@ -184,6 +184,12 @@
     sections.forEach((s) => sio.observe(s));
   }
 
+  /* ---- Skeleton: clear shimmer once each screenshot loads ---- */
+  $$(".browser img").forEach((img) => {
+    if (img.complete && img.naturalWidth > 0) img.classList.add("is-loaded");
+    else img.addEventListener("load", () => img.classList.add("is-loaded"), { once: true });
+  });
+
   /* ---- Subtle 3D tilt on cards (pointer, desktop only) ---- */
   if (!reduceMotion && window.matchMedia("(pointer: fine)").matches) {
     $$("[data-tilt]").forEach((card) => {
