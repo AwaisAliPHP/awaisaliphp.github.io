@@ -88,11 +88,17 @@ a:focus-visible, button:focus-visible, .filter-chip:focus-visible {
 
 /* ---------- Animated background ---------- */
 .bg-orbs { position: fixed; inset: 0; z-index: -1; overflow: hidden; pointer-events: none; }
-.orb { position: absolute; border-radius: 50%; filter: blur(90px); opacity: .55; }
-.orb-1 { width: 46vw; height: 46vw; left: -10vw; top: -12vw; background: #6d4dff; animation: float1 22s ease-in-out infinite; }
-.orb-2 { width: 38vw; height: 38vw; right: -8vw; top: 18vh; background: #1aa7c9; opacity: .4; animation: float2 26s ease-in-out infinite; }
-.orb-3 { width: 34vw; height: 34vw; left: 30vw; bottom: -14vw; background: #8b5cf6; opacity: .32; animation: float1 30s ease-in-out infinite reverse; }
-[data-theme="light"] .orb { opacity: .22; }
+.orb { position: absolute; border-radius: 50%; filter: blur(68px); opacity: .5; will-change: transform; transform: translateZ(0); }
+.orb-1 { width: 42vw; height: 42vw; left: -10vw; top: -12vw; background: #6d4dff; animation: float1 24s ease-in-out infinite; }
+.orb-2 { width: 34vw; height: 34vw; right: -8vw; top: 18vh; background: #1aa7c9; opacity: .38; animation: float2 28s ease-in-out infinite; }
+.orb-3 { width: 32vw; height: 32vw; left: 30vw; bottom: -14vw; background: #8b5cf6; opacity: .3; animation: float1 32s ease-in-out infinite reverse; }
+[data-theme="light"] .orb { opacity: .2; }
+/* Subtle film-grain texture (2026 trend), kept behind content so it never hurts contrast */
+.bg-orbs::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .045;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+[data-theme="light"] .bg-orbs::after { opacity: .03; }
 .grid-overlay {
   position: absolute; inset: 0;
   background-image: linear-gradient(var(--border) 1px, transparent 1px), linear-gradient(90deg, var(--border) 1px, transparent 1px);
@@ -183,7 +189,8 @@ a:focus-visible, button:focus-visible, .filter-chip:focus-visible {
 @keyframes pulse { 0%{ box-shadow:0 0 0 0 rgba(43,213,118,.5);} 70%{ box-shadow:0 0 0 8px rgba(43,213,118,0);} 100%{ box-shadow:0 0 0 0 rgba(43,213,118,0);} }
 
 .hero-title { font-size: clamp(2.1rem, 5.4vw, 3.65rem); font-weight: 700; }
-.hero-title .grad { background: var(--grad); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+.hero-title .grad { background: var(--grad); background-size: 220% 220%; -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; animation: gradShift 9s ease-in-out infinite; }
+@keyframes gradShift { 0%, 100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
 .hero-sub { color: var(--text-soft); font-size: clamp(1rem, 1.4vw, 1.12rem); max-width: 38ch; margin: 1.3rem 0 1.8rem; }
 .hero-sub strong { color: var(--text); font-weight: 600; }
 

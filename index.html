@@ -32,6 +32,9 @@
   <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
   <link rel="alternate icon" href="favicon.ico" />
 
+  <!-- Preload LCP hero image for fast first paint -->
+  <link rel="preload" as="image" href="images/profile.webp" fetchpriority="high" />
+
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -159,7 +162,7 @@
 
         <div class="hero-visual" data-reveal>
           <div class="photo-wrap">
-            <img src="images/profile.jpg" alt="Portrait of Awais Ali, full-stack software engineer" width="440" height="550" />
+            <img src="images/profile.webp" alt="Portrait of Awais Ali, full-stack software engineer" width="440" height="550" fetchpriority="high" decoding="async" />
             <span class="badge-float badge-1">⚡ Laravel</span>
             <span class="badge-float badge-2">⚛ React</span>
             <span class="badge-float badge-3">🤖 AI&nbsp;/&nbsp;APIs</span>
@@ -226,7 +229,7 @@
 
           <aside class="about-side" data-reveal>
             <figure class="about-photo">
-              <img src="images/awais-cutout.png" alt="Portrait of Awais Ali" loading="lazy" width="611" height="919" />
+              <img src="images/awais-cutout.webp" alt="Portrait of Awais Ali" loading="lazy" decoding="async" width="611" height="919" />
             </figure>
             <div class="value-card">
               <h3>How I work</h3>
@@ -349,7 +352,7 @@
             <div class="work-shot">
               <div class="browser">
                 <div class="browser-bar"><i></i><i></i><i></i><span>socialrocketai.com</span></div>
-                <img src="images/projects/socialrocket.png" loading="lazy" alt="SocialRocket AI dashboard with scheduled social posts and website monitoring" />
+                <img src="images/projects/socialrocket.webp" loading="lazy" alt="SocialRocket AI dashboard with scheduled social posts and website monitoring" />
               </div>
             </div>
             <div class="work-body">
@@ -374,7 +377,7 @@
             <div class="work-shot">
               <div class="browser">
                 <div class="browser-bar"><i></i><i></i><i></i><span>trackpilotai.com</span></div>
-                <img src="images/projects/trackpilot.png" loading="lazy" alt="TrackPilot project & time-tracking dashboard" />
+                <img src="images/projects/trackpilot.webp" loading="lazy" alt="TrackPilot project & time-tracking dashboard" />
               </div>
             </div>
             <div class="work-body">
@@ -398,7 +401,7 @@
             <div class="work-shot">
               <div class="browser">
                 <div class="browser-bar"><i></i><i></i><i></i><span>dsr.appliconsoft.com</span></div>
-                <img src="images/projects/dsr.png" loading="lazy" alt="DSR Portal — daily status report and project Kanban dashboard" />
+                <img src="images/projects/dsr.webp" loading="lazy" alt="DSR Portal — daily status report and project Kanban dashboard" />
               </div>
             </div>
             <div class="work-body">
@@ -421,7 +424,7 @@
             <div class="work-shot">
               <div class="browser">
                 <div class="browser-bar"><i></i><i></i><i></i><span>pacx.proadvisorcoach.com</span></div>
-                <img src="images/projects/pacx.png" loading="lazy" alt="ProAdvisor Coach (PACX) admin dashboard — platform activity chart and user analytics" />
+                <img src="images/projects/pacx.webp" loading="lazy" alt="ProAdvisor Coach (PACX) admin dashboard — platform activity chart and user analytics" />
               </div>
             </div>
             <div class="work-body">
@@ -446,7 +449,7 @@
             <div class="work-shot">
               <div class="browser">
                 <div class="browser-bar"><i></i><i></i><i></i><span>app.proadvisorcoach.com</span></div>
-                <img src="images/projects/proadvisorcoach.png" loading="lazy" alt="ProAdvisor Coach dashboard — subscriptions, billing and coach payouts" />
+                <img src="images/projects/proadvisorcoach.webp" loading="lazy" alt="ProAdvisor Coach dashboard — subscriptions, billing and coach payouts" />
               </div>
             </div>
             <div class="work-body">
@@ -470,7 +473,7 @@
             <div class="work-shot">
               <div class="browser">
                 <div class="browser-bar"><i></i><i></i><i></i><span>proadvisordrivers.com/v-map</span></div>
-                <img src="images/projects/proadvisordrivers.png" loading="lazy" alt="ProAdvisor Drivers V-MAP — value, KPI, strategy and project planning tree" />
+                <img src="images/projects/proadvisordrivers.webp" loading="lazy" alt="ProAdvisor Drivers V-MAP — value, KPI, strategy and project planning tree" />
               </div>
             </div>
             <div class="work-body">
@@ -495,7 +498,7 @@
             <div class="work-shot">
               <div class="browser">
                 <div class="browser-bar"><i></i><i></i><i></i><span>mindscanhvp.com</span></div>
-                <img src="images/projects/mindscan.png" loading="lazy" alt="MindScan — Hartman Value Profile behavioral assessment platform" />
+                <img src="images/projects/mindscan.webp" loading="lazy" alt="MindScan — Hartman Value Profile behavioral assessment platform" />
               </div>
             </div>
             <div class="work-body">
@@ -519,7 +522,7 @@
             <div class="work-shot">
               <div class="browser">
                 <div class="browser-bar"><i></i><i></i><i></i><span>wow.proadvisordrivers.com</span></div>
-                <img src="images/projects/wow.png" loading="lazy" alt="WOW ideal-client profiler — demographics, psychographics and client scoring" />
+                <img src="images/projects/wow.webp" loading="lazy" alt="WOW ideal-client profiler — demographics, psychographics and client scoring" />
               </div>
             </div>
             <div class="work-body">
@@ -543,7 +546,7 @@
             <div class="work-shot">
               <div class="browser">
                 <div class="browser-bar"><i></i><i></i><i></i><span>bizee.com</span></div>
-                <img src="images/projects/bizee.png" loading="lazy" alt="Bizee (formerly Incfile) business-formation platform — Launch your LLC in minutes" />
+                <img src="images/projects/bizee.webp" loading="lazy" alt="Bizee (formerly Incfile) business-formation platform — Launch your LLC in minutes" />
               </div>
             </div>
             <div class="work-body">
@@ -567,7 +570,7 @@
             <div class="work-shot">
               <div class="browser">
                 <div class="browser-bar"><i></i><i></i><i></i><span>snapthecityapp.com</span></div>
-                <img src="images/projects/snapthecity.png" loading="lazy" alt="Snap The City admin dashboard — 34,000+ businesses, locations and community hubs" />
+                <img src="images/projects/snapthecity.webp" loading="lazy" alt="Snap The City admin dashboard — 34,000+ businesses, locations and community hubs" />
               </div>
             </div>
             <div class="work-body">
@@ -626,7 +629,7 @@
             <div class="work-shot">
               <div class="browser">
                 <div class="browser-bar"><i></i><i></i><i></i><span>shortlistme.com</span></div>
-                <img src="images/projects/shortlistme.png" loading="lazy" alt="ShortlistMe recruitment platform — skills-based job matching homepage" />
+                <img src="images/projects/shortlistme.webp" loading="lazy" alt="ShortlistMe recruitment platform — skills-based job matching homepage" />
               </div>
             </div>
             <div class="work-body">
@@ -651,7 +654,7 @@
             <div class="work-shot">
               <div class="browser">
                 <div class="browser-bar"><i></i><i></i><i></i><span>app.thepathfinderhub.com</span></div>
-                <img src="images/projects/pathfinder.png" loading="lazy" alt="PathFinder Pro dashboard — scholarship tracking, journey planner and AI voice assistant" />
+                <img src="images/projects/pathfinder.webp" loading="lazy" alt="PathFinder Pro dashboard — scholarship tracking, journey planner and AI voice assistant" />
               </div>
             </div>
             <div class="work-body">
@@ -676,7 +679,7 @@
             <div class="work-shot">
               <div class="browser">
                 <div class="browser-bar"><i></i><i></i><i></i><span>mazuzee.com</span></div>
-                <img src="images/projects/mazuzee.png" loading="lazy" alt="Mazuzee marine & fishing equipment online store homepage" />
+                <img src="images/projects/mazuzee.webp" loading="lazy" alt="Mazuzee marine & fishing equipment online store homepage" />
               </div>
             </div>
             <div class="work-body">
