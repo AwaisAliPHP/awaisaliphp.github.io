@@ -19,11 +19,18 @@
     localStorage.setItem("theme", next);
   });
 
-  /* ---- Sticky nav shadow ---- */
+  /* ---- Sticky nav shadow + reading progress ---- */
   const nav = $("#nav");
+  const progressBar = $("#progressBar");
   const onScroll = () => {
+    const de = document.documentElement;
     nav.classList.toggle("scrolled", window.scrollY > 16);
     toTop.classList.toggle("show", window.scrollY > 600);
+    if (progressBar) {
+      const max = de.scrollHeight - window.innerHeight;
+      const y = window.scrollY || window.pageYOffset || de.scrollTop || 0;
+      progressBar.style.width = (max > 0 ? Math.min(1, y / max) * 100 : 0) + "%";
+    }
   };
 
   /* ---- Mobile menu ---- */
@@ -51,25 +58,92 @@
   const yearEl = $("#year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-  /* ---- Scroll reveal ---- */
+  /* ---- Scroll reveal (gentle stagger by sibling index) ---- */
   const revealEls = $$("[data-reveal]");
   if (reduceMotion || !("IntersectionObserver" in window)) {
     revealEls.forEach((el) => el.classList.add("in"));
   } else {
+    revealEls.forEach((el) => {
+      const sibs = Array.from(el.parentElement.children).filter((c) => c.hasAttribute("data-reveal"));
+      const idx = Math.max(0, sibs.indexOf(el));
+      el.style.transitionDelay = Math.min(idx, 8) * 55 + "ms";
+    });
     const io = new IntersectionObserver(
       (entries) => {
-        entries.forEach((entry, i) => {
+        entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            const el = entry.target;
-            const delay = el.parentElement && el.parentElement.dataset.stagger ? i * 80 : 0;
-            setTimeout(() => el.classList.add("in"), delay);
-            io.unobserve(el);
+            entry.target.classList.add("in");
+            io.unobserve(entry.target);
           }
         });
       },
       { threshold: 0.12, rootMargin: "0px 0px -8% 0px" }
     );
     revealEls.forEach((el) => io.observe(el));
+  }
+
+  /* ---- Work filtering (lets recruiters focus on one area) ---- */
+  const grid = $("#workGrid");
+  const filterBar = $("#workFilters");
+  if (grid && filterBar) {
+    // Map each card to one or more focus areas by its title keyword.
+    const RULES = [
+      ["SocialRocket", ["saas", "ai"]],
+      ["TrackPilot", ["saas"]],
+      ["DSR", ["saas"]],
+      ["PACX", ["coaching", "ai"]],
+      ["ProAdvisor Drivers", ["coaching", "apis"]],
+      ["ProAdvisor Coach", ["coaching", "saas"]],
+      ["MindScan", ["coaching"]],
+      ["WOW", ["coaching"]],
+      ["Bizee", ["saas"]],
+      ["Snap The City", ["apis"]],
+      ["CorpCareConnect", ["apis"]],
+      ["Build Delivery", ["saas", "apis"]],
+      ["ShortlistMe", ["saas"]],
+      ["PathFinder", ["saas", "ai"]],
+      ["Mazuzee", ["saas"]],
+      ["Vital", ["saas"]],
+      ["HRM", ["saas"]],
+    ];
+    const cards = $$(".work-card", grid);
+    cards.forEach((card) => {
+      const title = (card.querySelector("h3")?.textContent || "").replace(/ /g, " ");
+      const rule = RULES.find((r) => title.includes(r[0]));
+      card.dataset.cat = (rule ? rule[1] : []).join(" ");
+    });
+
+    // Fill chip counts.
+    $$(".filter-chip", filterBar).forEach((chip) => {
+      const f = chip.dataset.filter;
+      const n = f === "all" ? cards.length : cards.filter((c) => c.dataset.cat.split(" ").includes(f)).length;
+      const span = chip.querySelector(".chip-count");
+      if (span) span.textContent = n;
+    });
+
+    filterBar.addEventListener("click", (e) => {
+      const chip = e.target.closest(".filter-chip");
+      if (!chip) return;
+      const f = chip.dataset.filter;
+      $$(".filter-chip", filterBar).forEach((c) => {
+        const on = c === chip;
+        c.classList.toggle("active", on);
+        c.setAttribute("aria-selected", String(on));
+      });
+      let visible = 0;
+      cards.forEach((card) => {
+        const show = f === "all" || card.dataset.cat.split(" ").includes(f);
+        card.classList.toggle("hide", !show);
+        card.classList.remove("filter-in");
+        if (show && !reduceMotion) {
+          card.style.animationDelay = Math.min(visible, 8) * 45 + "ms";
+          // force reflow so the animation restarts each filter
+          void card.offsetWidth;
+          card.classList.add("filter-in");
+        }
+        if (show) visible++;
+      });
+    });
   }
 
   /* ---- Count-up stats ---- */

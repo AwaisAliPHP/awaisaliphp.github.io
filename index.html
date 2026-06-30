@@ -69,6 +69,7 @@
 
 <body>
   <a href="#hero" class="skip-link">Skip to content</a>
+  <div class="progress-bar" id="progressBar" aria-hidden="true"></div>
 
   <!-- Decorative animated background -->
   <div class="bg-orbs" aria-hidden="true">
@@ -329,11 +330,19 @@
         <div class="section-head" data-reveal>
           <span class="eyebrow">03 — Selected Work</span>
           <h2>Products &amp; platforms I've helped build.</h2>
-          <p class="section-lead">Real applications in production — built solo or as part of engineering teams
-            at Applicon Soft. Sensitive client details are intentionally summarized.</p>
+          <p class="section-lead">Real applications in production — built solo or as part of engineering teams.
+            Sensitive client details are intentionally summarized. <strong>Tip:</strong> filter by focus area below.</p>
         </div>
 
-        <div class="work-grid">
+        <div class="work-filters" id="workFilters" role="tablist" aria-label="Filter projects by focus area">
+          <button class="filter-chip active" data-filter="all" type="button" role="tab" aria-selected="true">All <span class="chip-count"></span></button>
+          <button class="filter-chip" data-filter="coaching" type="button" role="tab" aria-selected="false">Coaching <span class="chip-count"></span></button>
+          <button class="filter-chip" data-filter="ai" type="button" role="tab" aria-selected="false">AI <span class="chip-count"></span></button>
+          <button class="filter-chip" data-filter="saas" type="button" role="tab" aria-selected="false">SaaS &amp; Web <span class="chip-count"></span></button>
+          <button class="filter-chip" data-filter="apis" type="button" role="tab" aria-selected="false">APIs &amp; Mobile <span class="chip-count"></span></button>
+        </div>
+
+        <div class="work-grid" id="workGrid">
 
           <!-- 1. SocialRocket AI -->
           <article class="work-card feature" data-reveal data-tilt>
