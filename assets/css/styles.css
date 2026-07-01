@@ -226,7 +226,8 @@ a:focus-visible, button:focus-visible, .filter-chip:focus-visible {
 @keyframes auraPulse { 0%,100% { opacity: .82; transform: scale(1); } 50% { opacity: 1; transform: scale(1.05); } }
 .photo-wrap img {
   position: relative; z-index: 1; width: 100%; height: auto; display: block;
-  filter: drop-shadow(0 20px 30px rgba(0,0,0,.55));
+  /* neon rim-light separates the dark suit from the dark background */
+  filter: drop-shadow(0 0 24px rgba(124,92,255,.45)) drop-shadow(0 16px 28px rgba(0,0,0,.55));
 }
 [data-theme="light"] .photo-wrap img { filter: drop-shadow(0 16px 26px rgba(20,25,60,.22)); }
 .badge-float {
