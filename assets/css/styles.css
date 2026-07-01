@@ -228,6 +228,9 @@ a:focus-visible, button:focus-visible, .filter-chip:focus-visible {
   position: relative; z-index: 1; width: 100%; height: auto; display: block;
   /* neon rim-light separates the dark suit from the dark background */
   filter: drop-shadow(0 0 24px rgba(124,92,255,.45)) drop-shadow(0 16px 28px rgba(0,0,0,.55));
+  /* fade the hard bottom crop so the figure blends into the section */
+  -webkit-mask-image: linear-gradient(to bottom, #000 72%, rgba(0,0,0,.35) 90%, transparent 100%);
+          mask-image: linear-gradient(to bottom, #000 72%, rgba(0,0,0,.35) 90%, transparent 100%);
 }
 [data-theme="light"] .photo-wrap img { filter: drop-shadow(0 16px 26px rgba(20,25,60,.22)); }
 .badge-float {
